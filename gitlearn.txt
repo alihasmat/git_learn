@@ -9,7 +9,7 @@ Learn Git
 - checking files in git repository: git status
 - removing files: rm -rf notex.txt
 - add all the files in git repository: git add .
-- add inidvidual files in git repository: git add notes.txt
+- add individual files in git repository: git add notes.txt
 - commit into the git repository: git commit -m "notes.txt file added"
  -m means message
 - write inside notes.txt: vi notes.txt
@@ -25,9 +25,9 @@ Learn Git
   and git commit -m "notes.txt file modified"
 - check all the history of git added: git log
 - delete the file: rm -rf notes.txt
-- git add . and git commit -m "notex.txt file deleted"
+- git add . and git commit -m "notes.txt file deleted"
 - git log and see the history.
-- if you have accidently deleted, added and committed it but you
+- if you have accidentally deleted, added and committed it but you
   want to delete the history log then you restore it using the
 hash number(52d4....) of the first commit. I can't just delete
 the middle commit because all the commits are chained
@@ -35,16 +35,22 @@ the middle commit because all the commits are chained
 - git log and it will show only one commit
 - what happened to all those commits, now they are
   in the unstaged area. git status, it shows the deleted notes in red color
-- what if I want to put all my work somewherelse without
+- what if I want to put all my work somewhere else without
   commit, and whenever I need I will commit those changes
   git stash
 - git add . and git status, deleted column appears green and
   then create new file, touch gitlearn.txt and then git stash
+- after stashing, git status shows the working tree clean
+- git log, it shows only the first commit which was made in the beginning.
+- cat notes.txt shows the file is empty. thats how we go back to the project again.
+- to bring all the stashed changes, we do, git stash pop
+- git stash clear, clear all the stashed files
+
+
 
 
 
  
-
 
 
 
