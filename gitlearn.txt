@@ -1,0 +1,52 @@
+Learn Git
+- install git
+- create a folder in desktop, mkdir learn_git
+- cd projects to get into the learn_git
+- initialise the git: git init
+- to check all the files: ls -a
+- check what inside the .git folder: ls .git
+- create a new file: touch notes.txt
+- checking files in git repository: git status
+- removing files: rm -rf notex.txt
+- add all the files in git repository: git add .
+- add inidvidual files in git repository: git add notes.txt
+- commit into the git repository: git commit -m "notes.txt file added"
+ -m means message
+- write inside notes.txt: vi notes.txt
+- check what is written inside: cat notes.txt
+- after adding some text, check the git status
+  your text file has been modified, appears in red color
+- add the modified text again, git add .
+  git status shows your modified file appears in green.
+- if you don't want changes to be made and restore the previous one
+  then git restore --staged notes.txt
+  type git status, your modified text appears in red.
+- but if you want to commit after restore, then add it again
+  and git commit -m "notes.txt file modified"
+- check all the history of git added: git log
+- delete the file: rm -rf notes.txt
+- git add . and git commit -m "notex.txt file deleted"
+- git log and see the history.
+- if you have accidently deleted, added and committed it but you
+  want to delete the history log then you restore it using the
+hash number(52d4....) of the first commit. I can't just delete
+the middle commit because all the commits are chained
+- git reset 52d49c43794e407c33578121a108ea11acf2103a 
+- git log and it will show only one commit
+- what happened to all those commits, now they are
+  in the unstaged area. git status, it shows the deleted notes in red color
+- what if I want to put all my work somewherelse without
+  commit, and whenever I need I will commit those changes
+  git stash
+- git add . and git status, deleted column appears green and
+  then create new file, touch gitlearn.txt and then git stash
+
+
+
+ 
+
+
+
+
+
+
