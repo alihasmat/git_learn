@@ -1,0 +1,8 @@
+git push to origin
+- go to github profile and create a new repository
+- name the new repository to git_learn
+- copy the url, https://github.com/alihasmat/git_learn.git
+- in your terminal, git remote add origin url
+- git remote -v shows all the url attached to this folder
+- git push origin main: push the file to main
+
