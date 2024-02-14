@@ -1,0 +1,71 @@
+if you want to work on other projects:
+- first, fork that project and create new fork
+- Now, it is in our own account and do anything we want
+to do with it.
+- clone: copy the url from code tab
+- git clone url
+- origin url is our url and upstream is the url from where
+  we have forked.
+- git remote add upstream forkedUrl
+- git remote -v: appears both original and upstream urls
+- now make changes in readme file.
+- git status lets u know, u have modified the file
+- never commit on main branch, create a new branch called
+  hasmat: git branch hasmat
+- git checkout hasmat: the head will come on hasmat branch
+- git add .
+- git commit -m "Hasmat added a message"
+- git push origin hasmat
+
+Now we need to merger, I have modified the readme file and 
+I am telling the sankardev/classroomop to merge my file.
+- after you push the branch, click on compare and pull button.
+- click on create pull request.
+- one branch means only one pull request. Now if I add another file
+ and commit to hasmat branch, only the commits history will appear.
+For example,
+- Right now we are in the hasmat branch, then touch hasmat.txt
+- git add .
+- git commit -m "hasmat.txt file added"
+- git push origin hasmat
+Now we can see the changes in the commit tab. It will not create a whole 
+new pull request. Through changes in commit history, we can review the changes.
+If too many features or bugs changes added in the same branch, it will be difficult
+to manage.
+
+For every new feature bugs, create a new branch and then work on it.
+Never commit in main branch and never commit all the features on the same branch.
+
+What if you have extra commit and you want to remove it. In our example, we want
+to remove commit "hasmat.txt file added"
+- git log and copy the hash number
+- git reset 953bbabcaaf7cc30ef46a15a4763dfbeaa327f8b
+- git status, hasmat.txt file will be untracked files
+- git add .
+- git stash (now it should be gone)
+- git log to see the changes in commit history
+- git push origin hasmat -f (force push this because the files in 
+  our repository and online repository conflict)
+
+click on merge and the main project file should reflect the changes.
+
+To see the changes in our main branch, either click on sync fork button or
+- git checkout main (change from hasmat branch to main)
+- git status, git log
+- git fetch --all --prune (it will fetch all the deleted ones also)
+- git reset --hard upstream/main
+- git log and you must see three commits.
+- git push origin main (if the branch is upto date then it will show what has been
+  updated by the main project(sankardev).
+
+Instead of doing fetch, we can also do git pull upstream main, git log and you will
+see all the commits being changed. Remember this is only in your local folder. Now,
+git push origin main.
+
+
+
+
+
+
+
+
